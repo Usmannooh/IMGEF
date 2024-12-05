@@ -67,17 +67,19 @@ ________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Citation**<br>
 If you find this work helpful, please cite our paper:<br>
-
+```bibtex
 @article{imgef2024,
-  title={IMGEF: Integrated Multi-Modal Graph-Enhanced Framework for Radiology Report Generation},<br>
-  author={Your Name et al.},<br>
-  journal={Journal Name},<br>
-  year={2024},<br>
-  volume={XX},<br>
-  pages={XX-XX},<br>
-  publisher={Publisher Name}<br>
+  title={IMGEF: Integrated Multi-Modal Graph-Enhanced Framework for Radiology Report Generation},
+  author={Your Name et al.},
+  journal={Journal Name},
+  year={2024},
+  volume={XX},
+  pages={XX-XX},
+  publisher={Publisher Name}
 }
-<br>
+```
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 ## **Contact**<br>
 For any questions or issues, please feel free to contact us:<br>
 **Email:** [your_email@example.com](mailto:your_email@example.com)
