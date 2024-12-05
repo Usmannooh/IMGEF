@@ -1,6 +1,6 @@
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-**IMGEF**
-**IMGEF: Integrated Multi-Modal Graph-Enhanced Framework**
+
+**IMGEF: Integrated Multi-Modal Graph-Enhanced Framework** <br>
 **Overview**
 IMGEF is an advanced framework designed for generating high-quality radiology reports by integrating multi-modal features through graph-based techniques. This repository provides the implementation for the IMGEF model, which incorporates spatiall-aware graph embeddings, multi-modal attention mechanisms, and fusion techniques to ensure state-of-the-art performance on benchmark datasets.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
