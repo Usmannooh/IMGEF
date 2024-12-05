@@ -25,14 +25,14 @@ ________________________________________________________________________________
 IMGEF is evaluated on the publicly available **IU X-Ray** dataset.<br>
 
 ### **Dataset Preparation**<br>
-1. Download the IU X-Ray dataset from the [official source](https://iuhealth.org/find-medical-services/x-rays).<br>
+1. Download the IU X-Ray dataset from the [here](https://iuhealth.org/find-medical-services/x-rays).<br>
 2. Place the dataset in the following directory structure:<br>
  
-   data/
-   └── iu_xray/
-       ├── images/
-       ├── reports/
-       └── annotations/
+   data/<br>
+   └── iu_xray/<br>
+       ├── images/<br>
+       ├── reports/<br>
+       └── annotations/<br>
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Usage**<br>
