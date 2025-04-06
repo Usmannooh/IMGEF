@@ -22,10 +22,10 @@ def parse_agrs():
     parser = argparse.ArgumentParser()
 
     # Data input settings
-    parser.add_argument('--image_dir', type=str, default=r'E:\MKCL_usman\usman\R2Gen\data\iu_xray\images', help='the path to the directory containing the data.')
-    parser.add_argument('--ann_path', type=str, default=r'E:\MKCL_usman\usman\R2Gen\data\iu_xray\annotation.json', help='the path to the directory containing the data.')
-    parser.add_argument('--vocab-path', type=str, default=r'E:\MKCL_usman\usman\R2Gen\data\vocab.pkl')
-    parser.add_argument('--emb_path', type=str, default=r'E:\MKCL_usman\usman\R2Gen\data\embedding\glove.6B.200d-relativized.txt')
+    parser.add_argument('--image_dir', type=str, default=r'E:\usman\usman\R2Gen\data\iu_xray\images', help='the path to the directory containing the data.')
+    parser.add_argument('--ann_path', type=str, default=r'E:\usman\usman\R2Gen\data\iu_xray\annotation.json', help='the path to the directory containing the data.')
+    parser.add_argument('--vocab-path', type=str, default=r'E:\usman\usman\R2Gen\data\vocab.pkl')
+    parser.add_argument('--emb_path', type=str, default=r'E:\usman\usman\R2Gen\data\embedding\glove.6B.200d-relativized.txt')
 
     # Data loader settings
     parser.add_argument('--dataset_name', type=str, default='iu_xray', choices=['iu_xray', 'mimic_cxr'], help='the dataset to be used.')
@@ -70,8 +70,8 @@ def parse_agrs():
     # Trainer settings
     parser.add_argument('--n_gpu', type=int, default=1, help='the number of gpus to be used.')
     parser.add_argument('--epochs', type=int, default=100, help='the number of training epochs.')  # EPOCHS
-    parser.add_argument('--save_dir', type=str, default=r'E:\MKCL_usman\usman\R2Gen\results\iu_xray', help='the patch to save the models.')
-    parser.add_argument('--record_dir', type=str, default=r'E:\MKCL_usman\usman\R2Gen\records', help='the patch to save the results of experiments.')
+    parser.add_argument('--save_dir', type=str, default=r'E:\usman\usman\R2Gen\results\iu_xray', help='the patch to save the models.')
+    parser.add_argument('--record_dir', type=str, default=r'E:\Musman\usman\R2Gen\records', help='the patch to save the results of experiments.')
     parser.add_argument('--log_period', type=int, default=100, help='the logging interval (in batches).')
     parser.add_argument('--save_period', type=int, default=1, help='the saving period (in epochs).')
     parser.add_argument('--monitor_mode', type=str, default='max', choices=['min', 'max'], help='whether to max or min the metric.')
@@ -87,7 +87,7 @@ def parse_agrs():
     parser.add_argument('--adam_eps', type=float, default=1e-9, help='Epsilon value for the Adam optimizer for numerical stability.(Gradients vanishing)')
     parser.add_argument('--amsgrad', type=bool, default=True, help='.')
     parser.add_argument('--noamopt_warmup', type=int, default=4000, help='Zyada warmup steps se model ko initial training phase mein zyada stability milti hai')
-    parser.add_argument('--noamopt_factor', type=int, default=1, help='.') # 1 se 1.2 or 1.5
+    parser.add_argument('--noamopt_factor', type=int, default=1, help='.') 
     parser.add_argument('--momentum', type=float, default=0.9, help='Momentum factor for SGD optimizer.')
     parser.add_argument('--nesterov', type=bool, default=True, help='Use Nesterov momentum in SGD optimizer.')
 
@@ -116,8 +116,6 @@ def main():
 
     args = parse_agrs()
 
-
-    file_path = r'E:\MKCL_usman\usman\R2Gen\data\embedding\glove.6B.200d-relativized.txt'
 
 
     # fix random seeds
@@ -149,13 +147,7 @@ def main():
     lr_scheduler = build_lr_scheduler(args, optimizer)
 
 
-    #build trainer and start to train
-    trainer = Trainer(model,  criterion, criterion_c, metrics, optimizer, args, lr_scheduler,
-                      train_dataloader, val_dataloader, test_dataloader)
-
-    # # build NEW trainer and start to tr
-    # trainer = Trainer(model, criterion, metrics, optimizer, args, lr_scheduler, train_dataloader, val_dataloader,
-    #                   test_dataloader)
+    
 
     trainer.train()
 
